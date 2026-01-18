@@ -76,8 +76,7 @@ This project was created to:
 **Vicky**
 Frontend Developer
 
-🌐 Firebase link: [https://vicky-portfolio-a99d3.web.app/](https://vicky-portfolio-a99d3.web.app/)
-
+🌐 Firebase link: https://vicky-weather-app.web.app/
 ---
 
 ## ⭐ Future Improvements
@@ -90,3 +89,4 @@ Frontend Developer
 ---
 
 If you like this project, feel free to ⭐ the repository!
+

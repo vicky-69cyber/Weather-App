@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease;
+}
+
+.app {
+    width: 90%;
+    max-width: 350px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #4facfe;
+    color: white;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.weather {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    display: none;
+}
+
+.weather.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.weather img {
+    width: 80px;
+}
+
+.weather h2 {
+    font-size: 42px;
+}
+
+.details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Dynamic backgrounds */
+.sunny {
+    background: linear-gradient(to right, #fceabb, #f8b500);
+}
+
+.cloudy {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.rainy {
+    background: linear-gradient(to right, #4b79a1, #283e51);
+}
+
+.night {
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.loader {
+    width: 45px;
+    height: 45px;
+    border: 5px solid #e0e0e0;
+    border-top: 5px solid #4facfe;
+    border-radius: 50%;
+    margin: 25px auto;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+
+    .app {
+        width: 95%;
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+    }
+
+    .search-box button {
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .weather h2 {
+        font-size: 36px;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .weather img {
+        width: 70px;
+    }
+}
